@@ -71,12 +71,12 @@ nav ul li a:hover::after{
 
 .header-text{
     margin-top: 0px;
-    font-size: 0px;
+    font-size: 0px !important; 
     padding-left: 160px;
 }
 
 .header-text h1{
-    font-size: 30px;
+    font-size: 30px !important;
     margin-top: 0px;
 
 }
