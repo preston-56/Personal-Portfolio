@@ -77,10 +77,6 @@ nav ul li a:hover::after{
     padding-left: 130px;
 }
 
-/* .header-text p{
-    font-size:  30px;
-    margin-top:  5px;
-} */
 
 .header-text h1{
     font-size:  60px;
@@ -286,11 +282,11 @@ margin-top: 50px;
     text-align: center;
 }
 
-.work:hover img{
+.portfolio:hover img{
     transform: scale(1.1);
 }
 
-.work:hover .layer{
+.portfolio:hover .layer{
     height: 100%;
 
 }
