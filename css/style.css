@@ -4,7 +4,9 @@ padding: 0;
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 box-sizing: border-box;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: black;
     color: white;
@@ -158,15 +160,15 @@ nav ul li a:hover::after{
 }
 
 .tab-contents ul li span{
-    color: #b54769;
+    color: #b54769;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
     font-size: 14px;
 }
 
 .tab-contents{
     display: none;
-}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 
-.tab-contents.active-tab{
+.tab-contents.active-tab{                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
     display: block;
 }
 
@@ -454,5 +456,36 @@ nav .fa-solid{
         left: 25px;
         cursor: pointer;
     }
+    
+    .sub-title{
+    font-size: 40px;
+
+}
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+        }
+        .about-col-1{
+            margin-bottom: 30px;
+        }
+        .about-col-2{
+            font-size: 14px;
+        }
+        .tab-links{
+            font-size: 16x;
+            margin-right: 20px;
+        }
+        .contact-left, .contact-right{
+            flex-basis: 100%;
+        }
+        .copyright{
+            font-size: 14px;
+        }
+}
+
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    margin-left:  15px;
+    display: block;
 
 }

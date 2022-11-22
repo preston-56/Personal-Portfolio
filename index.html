@@ -14,11 +14,11 @@
                 <nav>
                     <img src="./Images/Preston-designstyle-cartoon-l.png" alt="logo">
                     <ul id="sidemenu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
                         <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                     </ul>
                     <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -160,12 +160,13 @@
             </div>
 
             <div class="contact-right">
-                <form>
+                <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
+                <span id="msg"></span>
 
             </div>
         </div>
@@ -201,5 +202,27 @@
                     }
 
                  </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwMpZ3kCS3lM8anLYHdwr-ywrfTj52GO9f56uRwNFn-HtB4DRkT20kBIUZxfhfx3enq/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg  = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
     </body>
     </html>
+
+    
